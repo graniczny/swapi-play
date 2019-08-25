@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/swapi-play/static/css/main.8f077e1c.chunk.css",
+    "main.js": "/swapi-play/static/js/main.2ef27f20.chunk.js",
+    "main.js.map": "/swapi-play/static/js/main.2ef27f20.chunk.js.map",
+    "runtime~main.js": "/swapi-play/static/js/runtime~main.4183534b.js",
+    "runtime~main.js.map": "/swapi-play/static/js/runtime~main.4183534b.js.map",
+    "static/js/2.f0516b4d.chunk.js": "/swapi-play/static/js/2.f0516b4d.chunk.js",
+    "static/js/2.f0516b4d.chunk.js.map": "/swapi-play/static/js/2.f0516b4d.chunk.js.map",
+    "index.html": "/swapi-play/index.html",
+    "precache-manifest.247035d984de94ef065915ae0716dfb1.js": "/swapi-play/precache-manifest.247035d984de94ef065915ae0716dfb1.js",
+    "service-worker.js": "/swapi-play/service-worker.js",
+    "static/css/main.8f077e1c.chunk.css.map": "/swapi-play/static/css/main.8f077e1c.chunk.css.map",
+    "static/media/deathstar.png": "/swapi-play/static/media/deathstar.95cebd7e.png",
+    "static/media/loading.gif": "/swapi-play/static/media/loading.bd69c16a.gif",
+    "static/media/logo.webp": "/swapi-play/static/media/logo.a51b1fe9.webp"
+  }
+}
