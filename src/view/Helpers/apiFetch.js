@@ -12,7 +12,7 @@ const singleFetch = url =>
       });
   });
 
-const fetchAll = url =>
+const apiFetch = url =>
   new Promise((resolve, reject) => {
     fetch(url)
       .then(res => res.json())
@@ -39,4 +39,4 @@ const fetchAll = url =>
       });
   });
 
-export default fetchAll;
+export { apiFetch, singleFetch };

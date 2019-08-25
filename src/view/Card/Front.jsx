@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardMedia } from '@material-ui/core';
+import propTypes from 'prop-types';
 
 
 const Front = ({ stats }) => {
@@ -21,6 +22,10 @@ const Front = ({ stats }) => {
       </CardContent>
     </Card>
   )
+}
+
+Front.propTypes = {
+  stats: propTypes.object,
 }
 
 export default Front;

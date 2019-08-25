@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import anime from 'animejs';
+import propTypes from 'prop-types';
 
 import Reverse from './Reverse';
 import Front from './Front';
@@ -7,7 +8,6 @@ import Front from './Front';
 const GameCard = ({ stats, onFinishRound, killRound, onRoundKilled, left }) => {
   const cardRef = React.createRef();
   const factor = left ? 1 : -1;
-  const scaleFactor = 1.2;
 
   useEffect(() => {
     if (stats) {
@@ -112,4 +112,12 @@ const GameCard = ({ stats, onFinishRound, killRound, onRoundKilled, left }) => {
   )
 }
 
-export default GameCard
+GameCard.propTypes = {
+  stats: propTypes.object,
+  onFinishRound: propTypes.func,
+  killRound: propTypes.func,
+  onRoundKilled: propTypes.func,
+  left: propTypes.bool,
+}
+
+export default GameCard;

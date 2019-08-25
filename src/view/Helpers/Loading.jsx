@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import LoadingGif from './loading.gif'
+import LoadingGif from '../Resources/loading.gif'
 
 const Loading = () => {
   return (

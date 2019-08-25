@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Card, CardContent, CardMedia } from '@material-ui/core';
+import propTypes from 'prop-types';
 
 const PickGame = ({ dataSelect }) => {
   return (
@@ -30,7 +31,7 @@ const PickGame = ({ dataSelect }) => {
           <CardMedia
             src='https://starwars-visualguide.com/assets/img/starships/10.jpg'
             component="img"
-            alt="Character picture"
+            alt="Starship picture"
           />
           <CardContent>
             <h1>Starships</h1>
@@ -40,5 +41,7 @@ const PickGame = ({ dataSelect }) => {
     </Grid>
   )
 }
-
+PickGame.propTypes = {
+  dataSelect: propTypes.func,
+}
 export default PickGame;

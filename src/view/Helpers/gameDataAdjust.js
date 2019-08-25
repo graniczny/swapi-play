@@ -29,27 +29,6 @@ const determineWiningCard = (roundData) => {
   }
 }
 
-const getUrlId = (url) => {
-  const arr = url.split('/');
-  return arr[arr.length - 2];
-}
-
-const prepareRoundData = (cards, winFactor) => {
-  const pickedCards = getRandomCards(cards);
-  const onlyWantedFields = pickedCards.map(ele => ({
-    name: ele.name,
-    value: ele[winFactor],
-    winFactorName: winFactor,
-    urlId: getUrlId(ele.url),
-  }));
-  const determinedWinner = determineWiningCard(onlyWantedFields);
-  const roundData = {
-    player1: determinedWinner[0],
-    player2: determinedWinner[1],
-  }
-  return roundData;
-}
-
 const getWinner = (data) => {
   const players = Object.keys(data);
   return players.map(ele => {
@@ -63,4 +42,35 @@ const getWinner = (data) => {
   }).filter(ele => ele)[0];
 }
 
-export { getWinner, prepareRoundData }
+const getUrlId = (url) => {
+  const arr = url.split('/');
+  return arr[arr.length - 2];
+}
+
+const getOnlyWantedFields = (cards, winFactor) => {
+  return cards.map(ele => ({
+    name: ele.name,
+    value: ele[winFactor],
+    winFactorName: winFactor,
+    urlId: getUrlId(ele.url),
+  }));
+}
+
+const prepareRoundData = (cards, winFactor) => {
+  const pickedCards = getRandomCards(cards);
+  const onlyWantedFields = getOnlyWantedFields(pickedCards, winFactor);
+  const determinedWinner = determineWiningCard(onlyWantedFields);
+  const roundData = {
+    player1: determinedWinner[0],
+    player2: determinedWinner[1],
+  }
+  return roundData;
+}
+
+export {
+  getWinner,
+  prepareRoundData,
+  determineWiningCard,
+  getOnlyWantedFields,
+  getRandomCards
+}

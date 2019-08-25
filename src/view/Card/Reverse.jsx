@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardMedia } from '@material-ui/core';
-import Logo from './logo.webp';
+import Logo from '../Resources/logo.webp';
 
 const Reverse = () => {
   return (
@@ -8,6 +8,7 @@ const Reverse = () => {
       <CardMedia
         component="img"
         src={Logo}
+        alt="Star wars logo"
       />
     </Card>
   )

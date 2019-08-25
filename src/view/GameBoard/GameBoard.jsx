@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Grid, Button } from '@material-ui/core';
+import propTypes from 'prop-types';
 
 import { getWinner, prepareRoundData } from '../Helpers/gameDataAdjust';
 import GameCard from '../Card/GameCard';
 import Reverse from '../Card/Reverse';
-import deathStar from './deathstar.png';
+import deathStar from '../Resources/deathstar.png';
 
 
 const GameBoard = ({ feed, winFactor, changeGameData }) => {
@@ -107,6 +108,12 @@ const GameBoard = ({ feed, winFactor, changeGameData }) => {
       </Grid>
     </Grid>
   )
+}
+
+GameBoard.propTypes = {
+  feed: propTypes.array,
+  winFactor: propTypes.string,
+  changeGameData: propTypes.func,
 }
 
 export default GameBoard

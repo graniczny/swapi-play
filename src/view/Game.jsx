@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Loading from './Helpers/Loading';
 import PickGame from './GameBoard/PickGame';
-import apiFetch from './Helpers/apiFetch';
+import { apiFetch } from './Helpers/apiFetch';
 import GameBoard from './GameBoard/GameBoard';
 
 const Game = () => {
