@@ -115,7 +115,7 @@ const GameCard = ({ stats, onFinishRound, killRound, onRoundKilled, left }) => {
 GameCard.propTypes = {
   stats: propTypes.object,
   onFinishRound: propTypes.func,
-  killRound: propTypes.func,
+  killRound: propTypes.bool,
   onRoundKilled: propTypes.func,
   left: propTypes.bool,
 }
