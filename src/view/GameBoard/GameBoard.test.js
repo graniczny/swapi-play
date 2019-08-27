@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, waitForElement } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 import GameBoard from './GameBoard';
 
 let sampleFeed = [
@@ -59,7 +59,7 @@ describe('<GameBoard/> test', () => {
   })
   test('card click test', () => {
     jest.setTimeout(10000);
-    const { getByText, getAllByAltText, container } = render(<GameBoard feed={sampleFeed} winFactor={winFactor} />);
+    const { getByText, getAllByAltText } = render(<GameBoard feed={sampleFeed} winFactor={winFactor} />);
     const playButton = getByText('Next round!');
     fireEvent.click(playButton);
     setTimeout(() => {
