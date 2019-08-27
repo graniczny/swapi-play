@@ -20,7 +20,7 @@ describe('<Game/> tests', () => {
   })
 
   test('Loads game after pick', async () => {
-    jest.setTimeout(15000);
+    jest.setTimeout(30000);
     const { getByText, container } = render(<Game />)
     const card = getByText('Characters');
     fireEvent.click(card);
@@ -29,7 +29,7 @@ describe('<Game/> tests', () => {
     ),
       {
         container,
-        timeout: 15000,
+        timeout: 30000,
       }
     )
     expect(playButton).toBeDefined();

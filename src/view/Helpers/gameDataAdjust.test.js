@@ -10,7 +10,7 @@ import { apiFetch } from './apiFetch';
 let dataFeed = [];
 const winFactor = 'mass';
 beforeEach(async () => {
-  jest.setTimeout(15000);
+  jest.setTimeout(30000);
   dataFeed = await apiFetch('https://swapi.co/api/people');
 });
 // units
